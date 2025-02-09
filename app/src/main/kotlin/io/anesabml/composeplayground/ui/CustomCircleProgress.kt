@@ -34,7 +34,9 @@ import androidx.graphics.shapes.star
 import androidx.graphics.shapes.toPath
 
 @Composable
-fun SquigglyCircleProgressBar() {
+fun SquigglyCircleProgressBar(
+    modifier: Modifier = Modifier,
+) {
     val starPolygon = remember {
         RoundedPolygon.star(
             numVerticesPerRadius = 12,
@@ -80,7 +82,7 @@ fun SquigglyCircleProgressBar() {
     val matrix = remember { Matrix() }
 
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .padding(16.dp)
             .drawWithCache {
@@ -118,7 +120,7 @@ private val colors = listOf(
     Color(0xFF3FCEBC),
 )
 
-@Preview(showBackground = true, device = "id:pixel_5")
+@Preview(showBackground = true)
 @Composable
 fun PreviewSquigglyCircleProgressBar() {
     SquigglyCircleProgressBar()

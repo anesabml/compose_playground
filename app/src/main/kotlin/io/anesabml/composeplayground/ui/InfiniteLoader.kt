@@ -1,7 +1,5 @@
 package io.anesabml.composeplayground.ui
 
-import android.R.attr
-import android.R.attr.animation
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
@@ -27,7 +25,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-
 
 data class Glow(
     val radius: Dp = 8.dp,    // Controls glow size
