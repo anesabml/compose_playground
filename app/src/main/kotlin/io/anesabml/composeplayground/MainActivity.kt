@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -22,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import io.anesabml.composeplayground.ui.AnchoredDraggable
 import io.anesabml.composeplayground.ui.Glow
 import io.anesabml.composeplayground.ui.InfiniteLoader
+import io.anesabml.composeplayground.ui.ScrollArea
 import io.anesabml.composeplayground.ui.SimpleHorizontalPager
 import io.anesabml.composeplayground.ui.SquigglyCircleProgressBar
 import io.anesabml.composeplayground.ui.theme.ComposePlaygroundTheme
@@ -72,6 +74,14 @@ fun MainScreen() {
 
                 item(key = "horizontal_pager") {
                     SimpleHorizontalPager()
+                }
+
+                item(key = "scroll_area") {
+                    ScrollArea(
+                        modifier = Modifier
+                            .height(400.dp)
+                            .fillMaxWidth()
+                    )
                 }
             }
         }
