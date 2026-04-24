@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ComposePlayground"
 include(":app")
-include(":baselineprofile")
+//include(":baselineprofile")
